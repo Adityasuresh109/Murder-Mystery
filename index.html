@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111016">
+<title>The Dead Man's Switch · Murder at the Masquerade</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;color:#f3ece4;background:#100f14;font-synthesis:none}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 80% 1%,#40312266,transparent 50%),radial-gradient(ellipse at 10% 70%,#30182255,transparent 45%),#100f14}button{font:inherit;cursor:pointer}button:disabled{opacity:.35;cursor:not-allowed}.shell{max-width:1250px;margin:auto;padding:24px}header{display:flex;gap:18px;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff18;padding-bottom:22px;margin-bottom:26px}.brand{letter-spacing:.16em;text-transform:uppercase;font-size:11px;color:#c9a57c;font-weight:800}.headline{font-family:Georgia,serif;font-size:clamp(29px,4vw,48px);font-weight:400;line-height:1.1;margin:7px 0}.sub{color:#ad9e99;font-size:14px;line-height:1.5}.status{border:1px solid #a78a5c66;border-radius:60px;padding:8px 12px;color:#e0c49d;background:#8b622716;font-size:12px;white-space:nowrap}main{display:grid;grid-template-columns: 1.4fr .8fr;gap:20px}.panel{background:#1b1921e8;border:1px solid #ffffff14;border-radius:18px;overflow:hidden;box-shadow:0 20px 40px #0003}.pad{padding:25px}.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:750;color:#bd9b6e}.sceneTitle{font:400 clamp(27px,3vw,41px) Georgia,serif;margin:14px 0}.narration{background:#24202a;border-left:3px solid #cbaf7e;border-radius:5px 12px 12px 5px;padding:22px 24px;font:italic 21px/1.55 Georgia,serif;color:#f6eadd;min-height:190px}.sceneInfo{margin:14px 0;color:#b8aead;font-size:14px;line-height:1.55}.buttons{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.primary,.secondary,.quiet{border-radius:9px;padding:11px 14px;font-size:13px;font-weight:700}.primary{background:#d0ac76;color:#171117;border:1px solid #d0ac76}.primary:hover{background:#e4bf88}.secondary{background:#2e2933;color:#f8efe7;border:1px solid #7b6a6b}.secondary:hover{background:#3a333f}.quiet{background:transparent;color:#e5cfb7;border:1px solid #574d53}.clock{font:400 36px Georgia,serif;font-variant-numeric:tabular-nums;color:#f4ddbc;margin-top:8px}.line{height:1px;background:#ffffff16;margin:18px 0}.step{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;padding:12px 10px;color:#a99d9d;background:none;border:none;border-radius:10px}.step:hover{background:#ffffff0c}.step.active{background:#a47b3826;color:#fff;border:1px solid #c9a57433}.number{min-width:26px;height:26px;display:grid;place-items:center;border:1px solid #817668;border-radius:50%;font-size:12px}.name{font-weight:750;font-size:13px}.desc{font-size:11px;margin-top:4px;line-height:1.4;color:#afa3a2}.warn{border:1px solid #8d694c55;background:#684a251a;color:#debe9b;border-radius:10px;padding:12px 15px;font-size:12px;line-height:1.6}.right .pad{padding:21px}.right h3{font:400 23px Georgia,serif;margin:0 0 18px}.metric{display:flex;justify-content:space-between;gap:16px;margin-bottom:12px;color:#b8aead;font-size:13px}.metric strong{color:#fff;font-weight:650}.full{grid-column:1/-1}.projection{max-width:1000px;margin:0 auto;text-align:center;padding:12vh 5vw}.projection .headline{font-size:clamp(48px,7vw,100px)}.projection .narration{max-width:860px;min-height:0;margin:40px auto;font-size:clamp(24px,3vw,36px);border:0;background:none}.projection .sceneInfo{max-width:720px;margin:auto;font-size:20px}.projection .controls{margin-top:30px}kbd{background:#37323a;padding:2px 6px;border-radius:4px}.hidden{display:none!important}footer{font-size:12px;color:#8c8285;margin-top:20px;text-align:center}body.project .shell{max-width:none}body.project main,body.project .normal{display:none}body:not(.project) #projection{display:none}
+@media(max-width:860px){main{grid-template-columns:1fr}.shell{padding:14px}header{align-items:flex-start}.status{font-size:10px}.pad{padding:18px}.narration{font-size:19px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="normal">
+<div><div class="brand">Blackthorn Society / Host Console</div><h1 class="headline">The Dead Man's Switch</h1><div class="sub">Murder at the Masquerade · Victim: Aditya · Host-controlled rehearsal</div></div>
+<div class="status">● LOCAL PROTOTYPE</div>
+</header>
+<main>
+<section class="panel">
+<div class="pad">
+<div class="eyebrow" id="act-label">Act 00 · Invitation</div>
+<h2 class="sceneTitle" id="act-title">The Last Invitation</h2>
+<div class="narration" id="narration" aria-live="polite"></div>
+<div class="sceneInfo" id="scene-info"></div>
+<div class="buttons">
+<button class="primary" id="next">Release Next Scene →</button>
+<button class="secondary" id="project">Open Projector Mode</button>
+<button class="quiet" id="copy">Copy Narration</button>
+<button class="quiet" id="reset">Reset Preview</button>
+</div>
+</div>
+</section>
+<section class="right">
+<div class="panel pad">
+<h3>Host Controls</h3>
+<div class="metric"><span>Guests expected</span><strong>22</strong></div>
+<div class="metric"><span>Fictional victim</span><strong>Aditya Suresh</strong></div>
+<div class="metric"><span>Game phase</span><strong id="stage">Prologue</strong></div>
+<div class="metric"><span>Timer</span><strong id="timerDisplay">00:00</strong></div>
+<div class="buttons"><button class="secondary" id="toggleTimer">Start timer</button><button class="quiet" id="zeroTimer">Zero timer</button></div>
+<div class="line"></div>
+<div class="eyebrow">Scene cue list</div>
+<div id="steps"></div>
+<div class="line"></div>
+<div class="warn"><strong>Preview only.</strong> This screen currently controls a scripted demo on one device. It does not broadcast to guest phones, assign secret roles, or store a live case. Those require a secured multiplayer backend.</div>
+</div>
+</section>
+<section class="panel full">
+<div class="pad"><div class="eyebrow">Design principle</div><div class="sceneInfo">The host is the murder victim inside the fiction, but continues operating the app outside the fiction. Every "message from Aditya" must have been recorded <em>before</em> the fictional death. Later police and forensic findings are delivered by the case system, not by an omniscient ghost. The host controls pacing and never competes as a suspect.</div></div>
+</section>
+</main>
+<div id="projection" class="projection">
+<div class="brand">Blackthorn Society · Sealed Archive</div>
+<h1 class="headline" id="projectionTitle"></h1>
+<div class="narration" id="projectionNarration"></div>
+<div class="sceneInfo" id="projectionInfo"></div>
+<div class="controls"><button class="secondary" id="exitProject">Exit Projector Mode</button></div>
+</div>
+<footer class="normal">© Original experimental game interface · No private guest dossiers or murder solution in public source.</footer>
+</div>
+<script>
+(function(){
+"use strict";
+const scenes=[
+{act:"00",label:"Invitation",title:"The Last Invitation",stage:"Prologue",text:"Good evening, everyone. You all know me. Or at least, you think you do. Tonight I have invited you here because twenty-two people have twenty-two reasons to be nervous. I have been keeping records. At midnight, I intend to open them.",info:"Read this live as the host, or use a recording. Guests mingle and receive private introductory objectives."},
+{act:"01",label:"The Blackout",title:"Aditya Is Dead",stage:"The Murder",text:"At precisely 10:47 PM the lights went out. When they returned, Aditya Suresh was found dead. The doors were sealed. No guest had left. The evening is now an investigation.",info:"This announcement is from the game's neutral narration system. Your character is now dead; you remain the out-of-story game master."},
+{act:"02",label:"Dead Man's Switch",title:"If You're Hearing This…",stage:"The Investigation",text:"If you're listening to this recording, someone has decided that my silence is worth more than their freedom. I knew I was taking a risk tonight. What I didn't know was which one of you would be desperate enough to kill me.",info:"Pre-death recording, unlocked by the host. Each participant receives a private investigative prompt in the eventual multiplayer game."},
+{act:"03",label:"Evidence Release",title:"The Clock Doesn't Match",stage:"New Evidence",text:"OFFICIAL FINDING: The preliminary timeline conflicts with the event's recorded announcements. At least one critical event happened earlier than the guests originally believed.",info:"Illustrative evidence headline only. The actual case-specific report, verified timestamps, and motive will be authored after the complete solution is fixed."},
+{act:"04",label:"Final Hearing",title:"Who Killed Aditya?",stage:"The Trial",text:"Your investigation ends now. Name the killer. Explain their motive, their opportunity, and the evidence that proves it. A guess is not enough. A convincing case requires proof.",info:"The host opens private ballots and runs the final confrontation. A prepared reconstruction of the fixed crime follows the vote."}
+];
+let current=Number(sessionStorage.getItem("masq_scene")||0); if(current<0||current>=scenes.length)current=0;
+let elapsed=0,running=false,last=0;
+const $=id=>document.getElementById(id);
+function fmt(s){return String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0")}
+function render(){const sc=scenes[current];$("act-label").textContent="Act "+sc.act+" · "+sc.label;$("act-title").textContent=sc.title;$("narration").textContent="“"+sc.text+"”";$("scene-info").textContent=sc.info;$("stage").textContent=sc.stage;$("next").disabled=current===scenes.length-1;$("next").textContent=current===scenes.length-1?"Final scene reached":"Release Next Scene →";$("projectionTitle").textContent=sc.title;$("projectionNarration").textContent="“"+sc.text+"”";$("projectionInfo").textContent=sc.info;$("steps").innerHTML="";scenes.forEach((s,i)=>{const b=document.createElement("button");b.className="step"+(i===current?" active":"");const n=document.createElement("span");n.className="number";n.textContent=s.act;const info=document.createElement("span");const t=document.createElement("div");t.className="name";t.textContent=s.title;const d=document.createElement("div");d.className="desc";d.textContent=s.label;info.append(t,d);b.append(n,info);b.onclick=()=>{current=i;sessionStorage.setItem("masq_scene",current);render()};$("steps").appendChild(b)})}
+$("next").onclick=()=>{if(current<scenes.length-1){current++;sessionStorage.setItem("masq_scene",current);render()}};
+$("reset").onclick=()=>{if(confirm("Reset the scene preview?")){current=0;elapsed=0;running=false;$("toggleTimer").textContent="Start timer";$("timerDisplay").textContent="00:00";sessionStorage.setItem("masq_scene",current);render()}};
+$("copy").onclick=async()=>{try{await navigator.clipboard.writeText(scenes[current].text);$("copy").textContent="Copied";setTimeout(()=>$("copy").textContent="Copy Narration",1300)}catch(e){alert("Clipboard unavailable. Select and copy the narration manually.")}};
+$("project").onclick=()=>{document.body.classList.add("project")};$("exitProject").onclick=()=>{document.body.classList.remove("project")};
+document.addEventListener("keydown",e=>{if(e.key==="Escape")document.body.classList.remove("project")});
+$("toggleTimer").onclick=()=>{running=!running;last=Date.now();$("toggleTimer").textContent=running?"Pause timer":"Start timer"};
+$("zeroTimer").onclick=()=>{elapsed=0;last=Date.now();$("timerDisplay").textContent="00:00"};
+setInterval(()=>{if(running){const now=Date.now();elapsed+=Math.max(0,Math.floor((now-last)/1000));last=now;$("timerDisplay").textContent=fmt(elapsed)}},1000);
+render()
+})();
+</script>
+</body>
+</html>
