@@ -8,7 +8,7 @@ Twenty-two guests attend Aditya's midnight masquerade on the 23rd floor of Vespe
 
 ## Prototype scope
 
-The initial `index.html` is a **standalone, single-browser host console and public projection prototype**. It demonstrates the narrative, four-act pacing, reveal controls, optional countdown, and 22-seat participation tracker. This is **not** yet a secure live multiplayer app. The initial prototype deliberately does not contain the murderer, private guest identities, or the canonical solution.
+The initial `index.html` is a **standalone, single-browser host console and public projection prototype**. It demonstrates six narrated scenes, act selection, a count-up timer, and an alternate same-device projector view. This is **not** yet a secure live multiplayer app. The initial prototype deliberately does not contain the murderer, private guest identities, or the canonical solution.
 
 ## Design rules
 
@@ -32,8 +32,15 @@ The future multiplayer version will need a backend with server-side access contr
 
 ## Local preview
 
-Open `index.html` in a browser, or serve the repository with any local static web server. Actions in the prototype are stored locally in the browser. The public-screen view is an alternate view of the same device, not a network-connected second screen.
+Open `index.html` in a browser, or serve the repository with any local static web server. The current scene is saved in session storage; the elapsed timer is not retained across reloads. The public-screen view is an alternate view of the same device, not a network-connected second screen.
 
 ## Inspiration
 
 Inspired by the participatory Storyteller and social-deduction design principles of *Blood on the Clocktower*, but this is an independently designed game, not an adaptation of its role powers, scripts, characters, or artwork.
+
+## Current files
+
+- `index.html` — rebranded single-browser demo for *The 23rd Floor*
+- `GAME_DESIGN.md` — original gameplay loop, fairness contract, story premise, and testing plan
+
+**Not yet implemented:** 22 private player accounts, secret role distribution, real-time connection, votes, and the solved canonical mystery. The prototype is not ready for game night.
